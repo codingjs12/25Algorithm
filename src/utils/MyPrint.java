@@ -1,0 +1,14 @@
+package utils;
+
+import java.util.Arrays;
+import java.util.stream.Collectors;
+
+public class MyPrint {
+    public static void printArray(int[] arr) {
+        String result = Arrays.stream(arr)
+                .mapToObj(String::valueOf)
+                .collect(Collectors.joining(", ", "[","]"));
+
+        System.out.println(result);
+    }
+}
